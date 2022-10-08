@@ -35,7 +35,7 @@
 .navbar {
   background-color: #E3E3E3;
   height: 80px;
-  padding: 0 50px;
+  padding: 0 50px 0 20px;
   position: relative;
   display: flex;
   flex-direction: row;

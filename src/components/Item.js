@@ -3,7 +3,6 @@ import {Component} from "react";
 class Item extends Component {
   render() {
     const { product } = this.props
-    console.log(product)
     return (
       <div className="item">
         <img
