@@ -1,4 +1,5 @@
 import {Component} from "react";
+import Button from './Button'
 
 class Item extends Component {
   render() {
@@ -12,6 +13,7 @@ class Item extends Component {
         />
         <h3>{product.name}</h3>
         <p>{product.price}</p>
+        <Button>Añadir al Carro</Button>
       </div>
     )
   }

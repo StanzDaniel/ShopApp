@@ -20,6 +20,15 @@
   border-radius: 5px;
 }
 
+.button {
+  background-color: #0A283E;
+  color: #fff;
+  padding: 10px 15px;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .layout {
   background-color: #FFF;
   color: #0a283e;
