@@ -3,7 +3,7 @@ import Button from './Button'
 
 class Item extends Component {
   render() {
-    const { product } = this.props
+    const { product, addToCart } = this.props
     return (
       <div className="item">
         <img
@@ -13,7 +13,9 @@ class Item extends Component {
         />
         <h3>{product.name}</h3>
         <p>{product.price}</p>
-        <Button>Añadir al Carro</Button>
+        <Button onClick={() => addToCart(product)}>
+          Añadir al Carro
+        </Button>
       </div>
     )
   }
