@@ -12,6 +12,7 @@ class App extends Component {
       { name: 'Chocolate', price: 5000, img: './products/chocolate.jpg' },
     ],
     cart: [],
+    isCartVisible: false,
   }
 
   addToCart = (product) => {
@@ -33,11 +34,18 @@ class App extends Component {
     })
   }
 
+  showCart = () => {
+    if (!this.state.cart.length) return
+    this.setState({ isCartVisible: !this.state.isCartVisible })
+  }
+
   render() {
     return (
       <div>
         <Navbar 
           cart={this.state.cart}
+          isCartVisible={this.state.isCartVisible}
+          showCart={this.showCart}
         />
         <Layout>
           <Title>Tienda</Title>

@@ -4,11 +4,15 @@ import Logo from './Logo'
 
 class Navbar extends Component {
   render() {
-    const { cart } = this.props
+    const { cart, isCartVisible, showCart } = this.props
     return (
       <nav className='navbar'>
         <Logo /> 
-        <Cart cart={cart}/>
+        <Cart 
+          cart={cart}
+          isCartVisible={isCartVisible}
+          showCart={showCart}
+        />
       </nav>
     )
   }
