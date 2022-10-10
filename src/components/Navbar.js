@@ -4,10 +4,11 @@ import Logo from './Logo'
 
 class Navbar extends Component {
   render() {
+    const { cart } = this.props
     return (
       <nav className='navbar'>
         <Logo /> 
-        <Cart />
+        <Cart cart={cart}/>
       </nav>
     )
   }

@@ -36,7 +36,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar 
+          cart={this.state.cart}
+        />
         <Layout>
           <Title>Tienda</Title>
           <Products
