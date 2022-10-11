@@ -4,7 +4,7 @@ import Logo from './Logo'
 
 class Navbar extends Component {
   render() {
-    const { cart, isCartVisible, showCart } = this.props
+    const { cart, isCartVisible, showCart, remove } = this.props
     return (
       <nav className='navbar'>
         <Logo /> 
@@ -12,6 +12,7 @@ class Navbar extends Component {
           cart={cart}
           isCartVisible={isCartVisible}
           showCart={showCart}
+          remove={remove}
         />
       </nav>
     )

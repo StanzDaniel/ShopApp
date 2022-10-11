@@ -39,6 +39,19 @@ class App extends Component {
     this.setState({ isCartVisible: !this.state.isCartVisible })
   }
 
+  remove = (item) => {
+    const { cart } = this.state
+    const newCart = cart.map(x => x.name === item 
+      ? ({
+        ...x,
+        count: x.count - 1,
+      })
+      : x)
+    const filter = newCart.filter(x => x.count > 0)
+    if (!filter.length) this.setState({ isCartVisible: false })
+    return this.setState({ cart: filter })
+  }
+
   render() {
     return (
       <div>
@@ -46,6 +59,7 @@ class App extends Component {
           cart={this.state.cart}
           isCartVisible={this.state.isCartVisible}
           showCart={this.showCart}
+          remove={this.remove}
         />
         <Layout>
           <Title>Tienda</Title>

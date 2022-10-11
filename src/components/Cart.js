@@ -4,7 +4,7 @@ import CartDetails from './CartDetails'
 
 class Cart extends Component {
   render() {
-    const { cart, isCartVisible, showCart } = this.props
+    const { cart, isCartVisible, showCart, remove } = this.props
     const count = cart.reduce((acc, el) => acc + el.count, 0)
 
     return (
@@ -21,7 +21,7 @@ class Cart extends Component {
           width='35px'
           onClick={showCart}
         />
-        { isCartVisible ? <CartDetails cart={cart}/> : null }
+        { isCartVisible ? <CartDetails cart={cart} remove={remove}/> : null }
       </div>
     )
   }

@@ -1,8 +1,9 @@
 import { Component } from 'react'
+import Remove from './Remove'
 
 class CartDetails extends Component {
   render() {
-    const { cart } = this.props
+    const { cart, remove } = this.props
     const total = cart.reduce((acc, el) => el.count * el.price + acc, 0)
     return (
       <div className='details'>
@@ -11,7 +12,7 @@ class CartDetails extends Component {
             <li className='details-li' key={x.name}>
               <img alt={x.name} src={x.img}/>
               {x.name}
-              <span>{x.count}</span>
+              <span>{x.count}<Remove onClick={() => remove(x.name)} /></span>
             </li>
           )}
           <li className='details-li'>Total <span>${total}</span></li>
